@@ -11,6 +11,13 @@ It's a good idea to use this appender for error-level log entries only to get in
   * There may be a slight delay before messages appear in the room.
   * Looking to send in log messages or errors in high volume? We suggest checking out a service like [Exceptional](http://exceptional.io/) or [Papertrail](http://papertrailapp.com/) instead.
 
+## UW-specific modifications
+
+In order to deploy custom releases to our shared Maven repository, you'll need to add your Maven credentials to `~/.gradle/gradle.properties`. For example:
+
+    mavenUsername=YOUR_NETID
+    mavenPassword=YOUR_MAVEN_TOKEN
+
 ## Appender Configuration
 
 Appender uses [HipChat's room notification API](https://www.hipchat.com/docs/apiv2/method/send_room_notification) for message delivery.
